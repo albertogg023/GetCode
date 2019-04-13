@@ -7,24 +7,17 @@ class Hello
     public function getTitle()
     {
 
-
-
-
-
-
-
-
         //define("DOC_ROOT","/path/to/html");
         //username and password of account
-        $service = "login";
-        $username ='efj46294@zoqqa.com';
-        $password = '592248CEF9ADA260FEF28363CCBECF75';
+        $service = "login"; //método login
+        $username ='  '; //gmail para iniciar sesión
+        $password = '   ';  //contraseña para iniciar sesión
 
         //login form action url
-        $url="http://descubre.inf.um.es/services/users.php"; 
-        $postinfo = "service=".$service."&username=".$username."&password=".$password;
+        $url="   "; //página de la que deseamos sacar código
+        $postinfo = "service=".$service."&username=".$username."&password=".$password;  //mediante método post iniciamos sesión
         
-        $cookie_file_path = "cookie.txt";
+        $cookie_file_path = "cookie.txt";   //obtenemos la cookie de inicio de sesión
         
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_HEADER, true);
@@ -51,11 +44,7 @@ class Hello
 
         preg_match('/^Set-Cookie:\s*([^;]*)/mi', $result, $m);
         parse_str($m[1], $cookies);
-
-        //print_r($cookies['PHPSESSID']);        
-        //die;
-
-
+        
 
         //login form action url
         $service = "get-code";
@@ -89,14 +78,14 @@ class Hello
 
 
 
-        $decode = json_decode($result);
+        $decode = json_decode($result); //"depuramos" el código eliminando carácteres que aparecen de la extracción de código
 
-        echo "<pre>";
+        echo "<pre>";   //los imprimos en pantalla dejándolo todo más claro con saltos de línea
         print_r($decode->code);
         echo "</pre>";
 
-        die;
-
+        die;    //fin de la ejecución del programa
+    
 
 
 
