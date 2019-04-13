@@ -9,8 +9,8 @@ class Hello
 
         //define("DOC_ROOT","/path/to/html");
         $service = "login"; //método login
-        $username =' efj46294@zoqqa.com '; //gmail para iniciar sesión
-        $password = ' 592248CEF9ADA260FEF28363CCBECF75  ';  //contraseña para iniciar sesión
+        $username =' '; //gmail para iniciar sesión
+        $password = '  ';  //contraseña para iniciar sesión
 
         
         $cookie_file_path = "cookie.txt";   //obtenemos la cookie de inicio de sesión
