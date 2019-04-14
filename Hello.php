@@ -25,7 +25,7 @@ class Hello
         //login form action url
         $service = "get-code";
         $id='21231';    //mediante el id del programa obtenemos sucódigo
-        $url="http://descubre.inf.um.es/services/programs.php"; //página de la cual queremos obtener código
+        $url="  "; //página de la cual queremos obtener código
         $postinfo = "service=".$service."&id=".$id; //método post con el cual obtenemos el código 
 
     
